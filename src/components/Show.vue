@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="show">
 
         <h3>
             
@@ -33,8 +33,9 @@
 
 <style scope>
 
-    .task {
-        background: #f4f4f4;
+    .show {
+        color: #fff;
+        background: #212121;
         margin: 5px;
         padding: 10px 20px;
         cursor: pointer;
