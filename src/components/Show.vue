@@ -25,7 +25,14 @@
 
             <hr style="border-color: #6a6a6a;">
 
-            <p class="pt-2">{{ show.time }}</p>
+            <p class="pt-2">
+
+                <!-- Remove Button -->
+                <i class="far fa-clock"></i>
+
+                {{ show.time }}
+
+            </p>
 
         </div>
 
