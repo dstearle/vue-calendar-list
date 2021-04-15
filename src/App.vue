@@ -3,7 +3,7 @@
     <div class="container">
 
         <!-- Header -->
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <Header />
 
     </div>
 
@@ -11,7 +11,7 @@
 
 <script>
 
-    import HelloWorld from './components/HelloWorld.vue'
+    import Header from './components/Header.vue'
 
     export default {
 
@@ -19,7 +19,7 @@
 
         components: {
 
-            HelloWorld,
+            Header,
 
         }
 
