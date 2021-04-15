@@ -14,22 +14,18 @@
 
             </div>
 
-            <div class="col-span-8 p-auto flex justify-center items-center show-type">{{ show.type }}</div>
+            <div class="col-span-8 p-auto flex justify-center items-center show-type text-2xl">{{ show.type }}</div>
 
         </div>
 
-        <div class="">
+        <div>
 
-            <h3 class="">
-            
-                <!-- Title -->
-                {{ show.name }}
+            <!-- Title -->
+            <p class="text-2xl pb-2">{{ show.name }}</p>
 
-                <hr style="border-color: #6a6a6a;">
+            <hr style="border-color: #6a6a6a;">
 
-                <p>{{ show.time }}</p>
-
-            </h3>
+            <p class="pt-2">{{ show.time }}</p>
 
         </div>
 
