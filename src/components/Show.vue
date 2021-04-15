@@ -5,7 +5,7 @@
         <h3>
             
             <!-- Title -->
-            {{ show.text }}
+            {{ show.name }}
 
         </h3>
 

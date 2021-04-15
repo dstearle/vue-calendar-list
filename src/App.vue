@@ -5,13 +5,17 @@
         <!-- Header -->
         <Header />
 
+        <!-- Shows List -->
+        <ShowsList :shows="shows" />
+
     </div>
 
 </template>
 
 <script>
 
-    import Header from './components/Header.vue'
+    import Header from './components/Header.vue';
+    import ShowsList from './components/ShowsList';
 
     export default {
 
@@ -20,6 +24,7 @@
         components: {
 
             Header,
+            ShowsList,
 
         },
 
