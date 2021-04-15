@@ -82,13 +82,13 @@
 
 <style>
 
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+    .container {
+        background-color: #1a1a1a;
+        max-width: 500px;
+        margin: 30px auto;
+        overflow: auto;
+        min-height: 300px;
+        padding: 30px;
     }
 
 </style>
