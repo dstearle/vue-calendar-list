@@ -1,15 +1,37 @@
 <template>
 
-    <div class="show">
+    <div class="show grid grid-rows-2 gap-3">
 
-        <h3 class="pt-5">
+        <div class="grid grid-cols-12 space-x-2">
             
-            <!-- Title -->
-            {{ show.name }}
+            <div class="col-span-4 grid grid-rows-3 gap-0 p-auto flex justify-center items-center text-center show-date">
 
-        </h3>
+                <div>{{ show.dayOfWeek }}</div>
 
-        <p>{{ show.day }}</p>
+                <div class="font-extrabold">{{ show.day }}</div>
+
+                <div>{{ show.month }}</div>
+
+            </div>
+
+            <div class="col-span-8 p-auto flex justify-center items-center show-type">{{ show.type }}</div>
+
+        </div>
+
+        <div class="">
+
+            <h3 class="">
+            
+                <!-- Title -->
+                {{ show.name }}
+
+                <hr style="border-color: #6a6a6a;">
+
+                <p>{{ show.time }}</p>
+
+            </h3>
+
+        </div>
 
     </div>
 
@@ -39,6 +61,15 @@
         margin: 5px;
         padding: 10px 20px;
         cursor: pointer;
+    }
+
+    .show-date {
+        color: #212121;
+        background-color: #ffa63a;
+    }
+
+    .show-type {
+        border: 3px solid #6a6a6a;
     }
 
     .task h3 {
