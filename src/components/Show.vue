@@ -2,7 +2,7 @@
 
     <div class="show">
 
-        <h3>
+        <h3 class="pt-5">
             
             <!-- Title -->
             {{ show.name }}
