@@ -3,7 +3,7 @@
     <header>
 
         <!-- Title -->
-        <h2 class="title">Main Floor</h2>
+        <h2 class="title text-5xl">Main Floor</h2>
 
     </header>
 
@@ -26,7 +26,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .title { border-bottom: 3px solid #ffa63a; }
