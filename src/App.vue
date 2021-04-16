@@ -72,6 +72,56 @@
                     time: '9:00pm to 11:30pm',
                 },
 
+                {
+                    id:4,
+                    name: 'Scott Weiland',
+                    type: 'Solo',
+                    dayOfWeek: 'THUR',
+                    day: '22',
+                    month: 'AUG',
+                    time: '12:00am to 2:00am',
+                },
+
+                {
+                    id:5,
+                    name: 'Guns N Roses',
+                    type: 'Band',
+                    dayOfWeek: 'WED',
+                    day: '16',
+                    month: 'JUL',
+                    time: '10:00pm to 11:00pm',
+                },
+
+                {
+                    id:6,
+                    name: 'Fleetwood Mac',
+                    type: 'Band',
+                    dayOfWeek: 'TUES',
+                    day: '15',
+                    month: 'JUN',
+                    time: '9:00pm to 11:30pm',
+                },
+
+                {
+                    id:7,
+                    name: 'Daft Punk',
+                    type: 'Band',
+                    dayOfWeek: 'THUR',
+                    day: '14',
+                    month: 'MAR',
+                    time: '9:00pm to 11:30pm',
+                },
+
+                {
+                    id:8,
+                    name: 'Joe Schmoe',
+                    type: 'Solo',
+                    dayOfWeek: 'MON',
+                    day: '14',
+                    month: 'APR',
+                    time: '9:00pm to 11:30pm',
+                },
+
             ]
 
         },
