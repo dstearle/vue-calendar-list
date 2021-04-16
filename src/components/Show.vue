@@ -1,6 +1,6 @@
 <template>
 
-    <div class="show grid grid-rows-2 gap-3">
+    <div class="show grid grid-rows-2 gap-3 pb-6">
 
         <div class="grid grid-cols-12 space-x-2">
             
