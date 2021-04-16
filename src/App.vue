@@ -122,6 +122,76 @@
                     time: '9:00pm to 11:30pm',
                 },
 
+                {
+                    id:9,
+                    name: 'Ozzy Ozbourne',
+                    type: 'Solo',
+                    dayOfWeek: 'SAT',
+                    day: '24',
+                    month: 'OCT',
+                    time: '12:00am to 2:00am',
+                },
+
+                {
+                    id:10,
+                    name: 'Korn',
+                    type: 'Band',
+                    dayOfWeek: 'FRI',
+                    day: '23',
+                    month: 'SEPT',
+                    time: '10:00pm to 11:00pm',
+                },
+
+                {
+                    id:11,
+                    name: 'Alice in Chains',
+                    type: 'Band',
+                    dayOfWeek: 'THUR',
+                    day: '22',
+                    month: 'AUG',
+                    time: '9:00pm to 11:30pm',
+                },
+
+                // {
+                //     id:12,
+                //     name: 'Scott Weiland',
+                //     type: 'Solo',
+                //     dayOfWeek: 'THUR',
+                //     day: '22',
+                //     month: 'AUG',
+                //     time: '12:00am to 2:00am',
+                // },
+
+                // {
+                //     id:13,
+                //     name: 'Guns N Roses',
+                //     type: 'Band',
+                //     dayOfWeek: 'WED',
+                //     day: '16',
+                //     month: 'JUL',
+                //     time: '10:00pm to 11:00pm',
+                // },
+
+                // {
+                //     id:14,
+                //     name: 'Guns N Roses',
+                //     type: 'Band',
+                //     dayOfWeek: 'WED',
+                //     day: '16',
+                //     month: 'JUL',
+                //     time: '10:00pm to 11:00pm',
+                // },
+
+                // {
+                //     id:15,
+                //     name: 'Guns N Roses',
+                //     type: 'Band',
+                //     dayOfWeek: 'WED',
+                //     day: '16',
+                //     month: 'JUL',
+                //     time: '10:00pm to 11:00pm',
+                // },
+
             ]
 
         },
