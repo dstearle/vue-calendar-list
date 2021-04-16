@@ -63,7 +63,6 @@
         background: #212121;
         margin: 5px;
         padding: 10px 20px;
-        cursor: pointer;
     }
 
     .show-date {
