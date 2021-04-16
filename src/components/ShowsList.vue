@@ -7,6 +7,8 @@
 
     </div>
 
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" @click="newer()">Newer</button>
+
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" @click="older()">Older</button>
 
 </template>
@@ -62,6 +64,14 @@
 
                 this. limit += 5;
                 this.currentIndex += 5;
+
+            },
+
+            // Method for showing newer shows in the list
+            newer() {
+
+                this. limit -= 5;
+                this.currentIndex -= 5;
 
             },
 
