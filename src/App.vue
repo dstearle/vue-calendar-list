@@ -14,6 +14,7 @@
 
 <script>
 
+    import { db } from '@/main';
     import Header from './components/Header.vue';
     import ShowsList from './components/ShowsList';
 
@@ -38,161 +39,42 @@
 
         },
 
-        created() {
+        mounted() {
 
-            this.shows = [
+            this.getEvents();
 
-                {
-                    id:1,
-                    name: 'Ozzy Ozbourne',
-                    type: 'Solo',
-                    dayOfWeek: 'SAT',
-                    day: '24',
-                    month: 'OCT',
-                    time: '12:00am to 2:00am',
-                },
+        },
 
-                {
-                    id:2,
-                    name: 'Korn',
-                    type: 'Band',
-                    dayOfWeek: 'FRI',
-                    day: '23',
-                    month: 'SEPT',
-                    time: '10:00pm to 11:00pm',
-                },
+        methods: {
 
-                {
-                    id:3,
-                    name: 'Alice in Chains',
-                    type: 'Band',
-                    dayOfWeek: 'THUR',
-                    day: '22',
-                    month: 'AUG',
-                    time: '9:00pm to 11:30pm',
-                },
+            // Connects to firebase
+            async getEvents() {
 
-                {
-                    id:4,
-                    name: 'Scott Weiland',
-                    type: 'Solo',
-                    dayOfWeek: 'THUR',
-                    day: '22',
-                    month: 'AUG',
-                    time: '12:00am to 2:00am',
-                },
+                // The snapshot of the data collection
+                let snapshot = await db.collection('calEvent').get();
 
-                {
-                    id:5,
-                    name: 'Guns N Roses',
-                    type: 'Band',
-                    dayOfWeek: 'WED',
-                    day: '16',
-                    month: 'JUL',
-                    time: '10:00pm to 11:00pm',
-                },
+                // Array to hold the data retrieved from firebase
+                let eventsArray = [];
 
-                {
-                    id:6,
-                    name: 'Fleetwood Mac',
-                    type: 'Band',
-                    dayOfWeek: 'TUES',
-                    day: '15',
-                    month: 'JUN',
-                    time: '9:00pm to 11:30pm',
-                },
+                snapshot.forEach(doc => {
 
-                {
-                    id:7,
-                    name: 'Daft Punk',
-                    type: 'Band',
-                    dayOfWeek: 'THUR',
-                    day: '14',
-                    month: 'MAR',
-                    time: '9:00pm to 11:30pm',
-                },
+                    // console.log(doc.data());
 
-                {
-                    id:8,
-                    name: 'Joe Schmoe',
-                    type: 'Solo',
-                    dayOfWeek: 'MON',
-                    day: '14',
-                    month: 'APR',
-                    time: '9:00pm to 11:30pm',
-                },
+                    // The data stored in firebase, except the id
+                    let appData = doc.data();
 
-                {
-                    id:9,
-                    name: 'Ozzy Ozbourne',
-                    type: 'Solo',
-                    dayOfWeek: 'SAT',
-                    day: '24',
-                    month: 'OCT',
-                    time: '12:00am to 2:00am',
-                },
+                    // Sets the id to the retrieved data
+                    appData.id = doc.id;
 
-                {
-                    id:10,
-                    name: 'Korn',
-                    type: 'Band',
-                    dayOfWeek: 'FRI',
-                    day: '23',
-                    month: 'SEPT',
-                    time: '10:00pm to 11:00pm',
-                },
+                    // Pushes the retrieved data to the events array
+                    eventsArray.push(appData);
 
-                {
-                    id:11,
-                    name: 'Alice in Chains',
-                    type: 'Band',
-                    dayOfWeek: 'THUR',
-                    day: '22',
-                    month: 'AUG',
-                    time: '9:00pm to 11:30pm',
-                },
+                });
 
-                // {
-                //     id:12,
-                //     name: 'Scott Weiland',
-                //     type: 'Solo',
-                //     dayOfWeek: 'THUR',
-                //     day: '22',
-                //     month: 'AUG',
-                //     time: '12:00am to 2:00am',
-                // },
+                // Sets the data to the calendar 
+                this.shows = eventsArray;
 
-                // {
-                //     id:13,
-                //     name: 'Guns N Roses',
-                //     type: 'Band',
-                //     dayOfWeek: 'WED',
-                //     day: '16',
-                //     month: 'JUL',
-                //     time: '10:00pm to 11:00pm',
-                // },
-
-                // {
-                //     id:14,
-                //     name: 'Guns N Roses',
-                //     type: 'Band',
-                //     dayOfWeek: 'WED',
-                //     day: '16',
-                //     month: 'JUL',
-                //     time: '10:00pm to 11:00pm',
-                // },
-
-                // {
-                //     id:15,
-                //     name: 'Guns N Roses',
-                //     type: 'Band',
-                //     dayOfWeek: 'WED',
-                //     day: '16',
-                //     month: 'JUL',
-                //     time: '10:00pm to 11:00pm',
-                // },
-
-            ]
+            },
 
         },
 
