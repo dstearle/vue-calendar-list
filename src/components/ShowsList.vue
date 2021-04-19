@@ -24,7 +24,7 @@
             <button 
                 class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" 
                 @click="older()"
-                v-show="!this.boola"
+                v-show="this.boola"
             >
                 Older
             </button>
@@ -66,7 +66,7 @@
                 // The length of the shows array
                 showsLength: parseInt(this.shows.length),
                 // Determins if 'Older' button is visible
-                boola: false
+                boola: true,
 
             }
 
@@ -106,12 +106,15 @@
             // Shows or hides the 'Older' button
             boolaToggle(){
 
-                if(this.currentIndex === (this.showsLength - 5 )) { return this.boola = true }
-                if(this.currentIndex === (this.showsLength - 4 )) { return this.boola = true }
-                if(this.currentIndex === (this.showsLength - 3 )) { return this.boola = true }
-                if(this.currentIndex === (this.showsLength - 2 )) { return this.boola = true }
-                if(this.currentIndex === (this.showsLength - 1 )) { return this.boola = true }
-                else { return this.boola = false }
+                // If the current index is at the end of the array then hide the 'Older' button
+                if(this.currentIndex === (this.showsLength - 5 )) { return this.boola = false }
+                if(this.currentIndex === (this.showsLength - 4 )) { return this.boola = false }
+                if(this.currentIndex === (this.showsLength - 3 )) { return this.boola = false }
+                if(this.currentIndex === (this.showsLength - 2 )) { return this.boola = false }
+                if(this.currentIndex === (this.showsLength - 1 )) { return this.boola = false }
+
+                // Else will show the 'Older' Button
+                else { return this.boola = true }
 
             }
 
