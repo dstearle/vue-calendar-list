@@ -72,7 +72,7 @@
                 });
 
                 // Sets the data to the calendar 
-                this.shows = eventsArray;
+                this.shows = eventsArray.reverse();
 
             },
 
