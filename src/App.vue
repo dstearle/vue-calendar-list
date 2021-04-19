@@ -6,7 +6,7 @@
         <Header />
 
         <!-- Shows List -->
-        <ShowsList :shows="shows" />
+        <ShowsList :shows="shows" :showsLength="showsLength" />
 
     </div>
 
@@ -33,7 +33,10 @@
 
             return {
 
+                // The array for shows
                 shows: [],
+                // The length of the shows array
+                showsLength: 0,
 
             }
 
@@ -73,6 +76,9 @@
 
                 // Sets the data to the calendar 
                 this.shows = eventsArray.reverse();
+
+                // The lenght of the shows array
+                this.showsLength = eventsArray.length;
 
             },
 

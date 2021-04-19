@@ -52,6 +52,7 @@
         props: {
 
             shows: Array,
+            showsLength: Number
 
         },
 
@@ -63,8 +64,6 @@
                 currentIndex: 0,
                 // The limit of viewable shows
                 limit: 5,
-                // The length of the shows array
-                showsLength: parseInt(this.shows.length),
                 // Determins if 'Older' button is visible
                 boola: true,
 
