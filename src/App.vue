@@ -81,7 +81,7 @@
                 });
 
                 // Sets the data to the calendar 
-                this.shows = sortedArray;
+                this.shows = sortedArray.reverse();
 
                 // The lenght of the shows array
                 this.showsLength = eventsArray.length;
