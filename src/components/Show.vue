@@ -10,7 +10,7 @@
 
                 <div class="font-extrabold">{{ show.day }}</div>
 
-                <div>{{ show.month }}</div>
+                <div>{{ monthDate }}</div>
 
             </div>
 
@@ -49,6 +49,51 @@
         props: {
 
             show: Object,
+
+        },
+
+        data() {
+
+            return {
+
+                // Current index for the shows list
+                dayDate: '',
+                // The limit of viewable shows
+                monthDate: '',
+
+            }
+
+        },
+
+        mounted() {
+
+            this.getAbbrevMonth();
+
+        },
+
+        methods: {
+
+            // Gets the abbreviated month
+            getAbbrevMonth() {
+
+                // Explodes the date into an array
+                const dateArray = this.show.date.split('-');
+
+                // Determines the abbreviated month
+                if(dateArray[0] === '1') { return this.monthDate = 'JAN' }
+                if(dateArray[0] === '2') { return this.monthDate = 'FEB' }
+                if(dateArray[0] === '3') { return this.monthDate = 'MAR' }
+                if(dateArray[0] === '4') { return this.monthDate = 'APR' }
+                if(dateArray[0] === '5') { return this.monthDate = 'MAY' }
+                if(dateArray[0] === '6') { return this.monthDate = 'JUN' }
+                if(dateArray[0] === '7') { return this.monthDate = 'JUL' }
+                if(dateArray[0] === '8') { return this.monthDate = 'AUG' }
+                if(dateArray[0] === '9') { return this.monthDate = 'SEP' }
+                if(dateArray[0] === '10') { return this.monthDate = 'OCT' }
+                if(dateArray[0] === '11') { return this.monthDate = 'NOV' }
+                if(dateArray[0] === '12') { return this.monthDate = 'DEC' }
+
+            },
 
         },
 
