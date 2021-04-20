@@ -59,9 +59,8 @@
                 // Array to hold the data retrieved from firebase
                 let eventsArray = [];
 
+                // Foreach loop for the data in the firestore
                 snapshot.forEach(doc => {
-
-                    // console.log(doc.data());
 
                     // The data stored in firebase, except the id
                     let appData = doc.data();
@@ -74,8 +73,15 @@
 
                 });
 
+                // Sorts the eventsArray by the date
+                const sortedArray = eventsArray.sort(function(a,b) { 
+
+                    return new Date(a.date).getTime() - new Date(b.date).getTime() 
+
+                });
+
                 // Sets the data to the calendar 
-                this.shows = eventsArray.reverse();
+                this.shows = sortedArray;
 
                 // The lenght of the shows array
                 this.showsLength = eventsArray.length;
