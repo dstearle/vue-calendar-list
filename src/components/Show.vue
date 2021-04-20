@@ -8,7 +8,7 @@
 
                 <div>{{ show.dayOfWeek.toUpperCase() }}</div>
 
-                <div class="font-extrabold">{{ show.day }}</div>
+                <div class="font-extrabold">{{ dayDate }}</div>
 
                 <div>{{ monthDate }}</div>
 
@@ -67,13 +67,25 @@
 
         mounted() {
 
+            this.getDay();
             this.getAbbrevMonth();
 
         },
 
         methods: {
 
-            // Gets the abbreviated month
+            // Gets the day from the date
+            getDay() {
+
+                // Explodes the date into an array
+                const dateArray = this.show.date.split('-');
+
+                // Determines the abbreviated month
+                return this.dayDate = dateArray[1];
+
+            },
+
+            // Gets the abbreviated month from the date
             getAbbrevMonth() {
 
                 // Explodes the date into an array
