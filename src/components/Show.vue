@@ -6,7 +6,7 @@
             
             <div class="col-span-4 grid grid-rows-3 gap-0 p-auto flex justify-center items-center text-center show-date">
 
-                <div>{{ show.dayOfWeek }}</div>
+                <div>{{ show.dayOfWeek.toUpperCase() }}</div>
 
                 <div class="font-extrabold">{{ show.day }}</div>
 
