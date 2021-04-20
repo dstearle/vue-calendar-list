@@ -52,7 +52,7 @@
         props: {
 
             shows: Array,
-            showsLength: Number
+            showsLength: Number,
 
         },
 
@@ -67,6 +67,27 @@
                 // Determins if 'Older' button is visible
                 boola: true,
 
+            }
+
+        },
+
+        watch: {
+            
+            // Watches for any changes in the showsLength prop
+            showsLength: {
+
+                // Method for setting the initial value for boola after the data has loaded
+                handler() { 
+                    
+                    // If showsLength prop is less than 6 items then hide the 'Older' button
+                    if(this.showsLength < 6) {
+
+                        this.boola = false
+
+                    }
+
+                }
+                
             }
 
         },
