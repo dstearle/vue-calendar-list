@@ -3,7 +3,7 @@
     <header>
 
         <!-- Title -->
-        <h2 class="title text-5xl">Main Floor</h2>
+        <h2 class="title text-5xl" style="color: white !important;">Main Floor</h2>
 
     </header>
 
