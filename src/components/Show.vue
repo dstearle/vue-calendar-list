@@ -6,14 +6,18 @@
             
             <div class="col-span-4 grid grid-rows-3 gap-0 p-auto flex justify-center items-center text-center show-date">
 
-                <div>{{ show.dayOfWeek.toUpperCase() }}</div>
+                <!-- Day Of Week -->
+                <div>{{ show.day.toUpperCase() }}</div>
 
+                <!-- Day By Date -->
                 <div class="font-extrabold">{{ dayDate }}</div>
 
+                <!-- Month Abbreviated -->
                 <div>{{ monthDate }}</div>
 
             </div>
 
+            <!-- Type -->
             <div class="col-span-8 p-auto flex justify-center items-center show-type text-2xl">{{ show.type }}</div>
 
         </div>
@@ -25,9 +29,9 @@
 
             <hr style="border-color: #6a6a6a;">
 
+            <!-- Time -->
             <p class="pt-2">
 
-                <!-- Remove Button -->
                 <i class="far fa-clock"></i>
 
                 {{ show.time }}
